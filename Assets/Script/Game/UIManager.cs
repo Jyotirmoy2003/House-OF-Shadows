@@ -7,12 +7,15 @@ using TMPro;
 
 public class UIManager : MonoSingleton<UIManager>
 {
+    [Header("Battery")]
+    [SerializeField] GameObject batteryContainer;
    [SerializeField] Slider batteryHealth;
    [SerializeField] Gradient gradient;
    [SerializeField] Image fill;
    [SerializeField] GameObject keySuggestPanel;
    [SerializeField] TMP_Text text_key;
    [Header("Bullet")]
+   [SerializeField] GameObject bulletConatiner;
    [SerializeField] TMP_Text textNoOfBullet;
    [Header("Tapes")]
    [SerializeField] TMP_Text tapeCaption;
@@ -20,6 +23,12 @@ public class UIManager : MonoSingleton<UIManager>
 
 
 
+
+    void Start()
+    {
+        batteryContainer.SetActive(false);
+        bulletConatiner.SetActive(false);
+    }
   
   //fun to set battery amount in UI
     public void SetBattery(float amount)
@@ -35,6 +44,7 @@ public class UIManager : MonoSingleton<UIManager>
         batteryHealth.maxValue=amount;
         batteryHealth.value=amount;
         fill.color=gradient.Evaluate(1f);
+        batteryContainer.SetActive(true);
     }
 
 
@@ -66,5 +76,12 @@ public class UIManager : MonoSingleton<UIManager>
         tapeCaption.text="";
     }
 
+
+    public void ListenToPlayerGotGun(Component sernder, object data)
+    {
+        
+        bulletConatiner.SetActive((bool)data);
+        
+    }
     
 }

@@ -11,7 +11,6 @@ public class CompAdder : MonoBehaviour,IInteractable
    }
 
    [SerializeField] componentType mycomp;
-   private float timmerForOutline;
    private Outline outline;
    private bool isLooking=false;
     
@@ -28,7 +27,7 @@ public class CompAdder : MonoBehaviour,IInteractable
     }
 
     
-     public bool Looking
+    public bool Looking
     {
         // when accessing the property simply return the value
         get => isLooking;
@@ -52,10 +51,7 @@ public class CompAdder : MonoBehaviour,IInteractable
         CheckAndAdd();
     }
     
-    public void NotLooking()
-    {
-        outline.enabled=false;
-    }
+  
     void CheckAndAdd()
     {
         switch(mycomp)

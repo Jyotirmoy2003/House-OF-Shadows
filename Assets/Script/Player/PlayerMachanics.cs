@@ -82,25 +82,7 @@ public class PlayerMachanics : MonoBehaviour
             SetInteractable(null);
         }
         #endregion
-        if(Input.GetKeyDown(KeyCode.E))
-            {
-                // if(!alreadyInHand && currentGrabable!=null )
-                // {
-                //     currentGrabable.GrabInHand();
-                //     alreadyInHand=true;
-                // }else if(alreadyInHand)
-                // {
-
-                //     PlayerHand.RemoveFromHand();
-                //     alreadyInHand=false;
-                // }
-            }  
-       
-        // if currently focusing an IInteractable and click -> interact
-        if(currentInteractable != null && Input.GetKeyDown(KeyCode.Q))
-        {
-            //currentInteractable.Interact();
-        }
+        
 
         if(Input.GetMouseButtonDown(2))
         {
@@ -170,7 +152,10 @@ public class PlayerMachanics : MonoBehaviour
         if(currentInteractable != null) 
         {
             currentInteractable.Looking=true;
-            uIManager.SetKeySuggest("Q");
+            if(InputManager.Instance.currentInput==Jy_Util.E_InputType.Keyboard)
+                uIManager.SetKeySuggest("E");
+            else 
+                uIManager.SetKeySuggest("LT");
         }else{
           
             uIManager.SetKeySuggest("empty");
@@ -191,7 +176,10 @@ public class PlayerMachanics : MonoBehaviour
         // if not null -> set looking
         if(currentGrabable != null) {
             currentGrabable.Looking=true;
-            uIManager.SetKeySuggest("E");
+            if(InputManager.Instance.currentInput==Jy_Util.E_InputType.Keyboard)
+                uIManager.SetKeySuggest("Q");
+            else 
+                uIManager.SetKeySuggest("LT1");
         }else{
           
             uIManager.SetKeySuggest("empty");

@@ -55,7 +55,7 @@ public class InputManager : MonoBehaviour
     void stopRumble()
     {
         pad=Gamepad.current;
-        pad.SetMotorSpeeds(0f,0f);
+        pad?.SetMotorSpeeds(0f,0f);
         ISRumbling=false;
     }
 

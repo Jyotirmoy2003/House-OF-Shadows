@@ -11,12 +11,9 @@ public class Pistol : MonoBehaviour
    [SerializeField] Transform shootPoint;
    [SerializeField] float rateOfire;
    [SerializeField] GameObject flashObject;
-   private float currentTime;
    private bool canShoot = true;
    private bool shootHold = false;
    
-
-   [SerializeField] bool inhand;
    
    private Ray ray;
    private RaycastHit hit;
@@ -31,18 +28,6 @@ public class Pistol : MonoBehaviour
     
 
 
-
-    // Update is called once per frame
-    void Update()
-    {
-        // if(Input.GetMouseButton(0) && currentTime>=rateOfire)
-        // {
-        //     currentTime=0;
-        //     Shoot();
-        // }
-
-        // currentTime+=Time.deltaTime;
-    }
 
     void SubcribeToInput(bool val)
     {
@@ -109,16 +94,14 @@ public class Pistol : MonoBehaviour
         bulletCount+=amount;
         UIManager.Instance.SetBulletUI(bulletCount);
     }
-    public int GetBullet()
-    {
-        return bulletCount;
-    }
+  
 
     public void ListnToOnPistolAdded(Component sender, object data)
     {
         if((bool)data)
         {
             SubcribeToInput(true);
+            UIManager.Instance.SetBulletUI(bulletCount);
         }else{
             SubcribeToInput(false);
         }

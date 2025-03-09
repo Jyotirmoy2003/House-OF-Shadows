@@ -59,7 +59,7 @@ public class PistolAdder : MonoBehaviour,IGrabable
        else {
         PlayerHand.PutInHand(this.gameObject,this); //sending IGrabale script by "this" to send In Event
         PlayerGotPistol.Raise(this,true);
-        //UIManager.instance.SetBulletUI(pistol.GetBullet());
+        
         this.gameObject.transform.SetParent(mainCamera.transform);
         transform.rotation=mainCamera.transform.rotation;
         

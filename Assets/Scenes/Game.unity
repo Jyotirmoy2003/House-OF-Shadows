@@ -6214,7 +6214,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31294
+  m_Name: pb_Mesh33722
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17170,7 +17170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   returingFromCutScene: 0
   cutsceneLength: 3
-  jumpscareTrigger: {fileID: 0}
+  jumpscareTrigger: {fileID: 1836436902}
 --- !u!4 &977551516
 Transform:
   m_ObjectHideFlags: 0
@@ -27094,7 +27094,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1580126347
 Transform:
   m_ObjectHideFlags: 0
@@ -28187,7 +28187,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1656380795}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
@@ -28198,7 +28198,7 @@ Light:
   m_InnerSpotAngle: 6
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -28223,7 +28223,7 @@ Light:
       e32: 0
       e33: 1
     m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
+  m_Cookie: {fileID: 2800000, guid: 21b93677f0767214b8108bfa076045dd, type: 3}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
   m_RenderMode: 0
@@ -28234,7 +28234,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -28837,9 +28837,9 @@ MonoBehaviour:
   response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1701914394}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: EventPlayerGotPistol
+      - m_Target: {fileID: 1701914402}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: ListenToPlayerGotGun
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -28918,6 +28918,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 0
   unparentGameObject: 0
+  batteryContainer: {fileID: 1606673153}
   batteryHealth: {fileID: 1326841146}
   gradient:
     serializedVersion: 2
@@ -28951,6 +28952,7 @@ MonoBehaviour:
   fill: {fileID: 202891057}
   keySuggestPanel: {fileID: 946531507}
   text_key: {fileID: 1141876641}
+  bulletConatiner: {fileID: 0}
   textNoOfBullet: {fileID: 1533064123}
   tapeCaption: {fileID: 741534682}
   showCaptionTime: 10
