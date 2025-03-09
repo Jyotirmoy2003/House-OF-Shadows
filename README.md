@@ -11,7 +11,9 @@ Exploration: Investigate rooms like the bedroom, kitchen, bathroom, and guest ro
 Puzzle Solving: Gather ritual items, repair a phone for an alternate escape, and uncover hidden lore.
 Immersive Horror: Tapes scattered throughout the house provide hints and deepen the mystery.
 
+![image alt](https://github.com/Jyotirmoy2003/House-OF-Shadows/blob/master/ReadmeElements/j6yjZy.png?raw=true)
 ![image alt](https://github.com/Jyotirmoy2003/House-OF-Shadows/blob/master/ReadmeElements/FF53hd.png?raw=true)
+![image alt](https://github.com/Jyotirmoy2003/House-OF-Shadows/blob/master/ReadmeElements/dhyIFi.png?raw=true)
 
 🛠️ Features
 ✅ AI-driven ghost that learns your movements.
